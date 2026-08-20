@@ -45,6 +45,6 @@
     </tr>
   </table>
 
-  <sub>💡 <i>Click any image to expand to full resolution</i></sub>
+
 
 </div>
