@@ -1,25 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oblivion -Nirdesh</title>
-    <meta name="description" content="A web collections useful webs and tools. Created by Nirdesh.">
-    <link rel="stylesheet" href="style.css">
-
+    <title>Oblivion - Nirdesh</title>
+    <meta name="description" content="A web collection of useful webs and tools. Created by Nirdesh.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes barPulse {
+
+            0%,
+            100% {
+                height: 4px;
+            }
+
+            50% {
+                height: 16px;
+            }
+        }
+
+        .animate-bar {
+            animation: barPulse 0.5s ease-in-out infinite alternate;
+        }
+
+        .delay-1 {
+            animation-delay: 0.15s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.3s;
+        }
+    </style>
+
+
 </head>
-<body class="h-screen bg-black">
-    <audio id="bgm" src="bgm.mp3" loop></audio>
-    
-    
+
+<body class="bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
+
+    <div id="panorama" class="fixed inset-0 z-0"></div>
+
+    <div class="fixed -top-32 -left-32 w-96 h-96 bg-amber-500/15 rounded-full blur-[120px] pointer-events-none z-10">
+    </div>
+    <div class="fixed -bottom-32 -right-32 w-96 h-96 bg-cyan-500/15 rounded-full blur-[120px] pointer-events-none z-10">
+    </div>
+
+    <main class="fixed top-6 left-6 z-50 flex items-center gap-4">
+        <button onclick="toggleModal(true)"
+            class="px-6 py-2.5 bg-slate-900/60 backdrop-blur-md border border-amber-500/30 rounded-xl font-semibold text-amber-400 hover:border-amber-400 transition active:scale-95 text-sm shadow-lg">
+            Explore Projects
+        </button>
+
+
+        <div id="modal"
+            class="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-200">
+            <div
+                class="bg-slate-900/50 backdrop-blur border border-white/10 rounded-2xl p-5 max-w-xl w-full flex flex-col gap-3.5 shadow-2xl">
+                <div class="flex items-center justify-between pb-2 border-b border-white/10">
+                    <div class="flex items-center gap-2">
+                        <h2 class="font-bold text-slate-100">Top Projects</h2>
+                        <span id="count"
+                            class="text-[11px] px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono">0</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="flex bg-slate-950/60 p-1 rounded-lg border border-white/10 text-xs">
+                            <button id="btnGrid" onclick="setMode('grid')"
+                                class="px-2.5 py-1 rounded-md transition bg-amber-500/20 text-amber-300">Grid </button>
+                            <button id="btnDeck" onclick="setMode('deck')"
+                                class="px-2.5 py-1 rounded-md transition text-slate-400 hover:text-slate-200">Deck
+                            </button>
+                        </div>
+                        <button onclick="toggleModal(false)"
+                            class="text-slate-400 hover:text-amber-400 font-bold px-2 transition">✕</button>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-2">
+                    <input type="text" id="search" oninput="render()" placeholder="Search projects..."
+                        class="bg-slate-950/50 border border-white/10 focus:border-amber-500/50 rounded-lg px-3 py-1.5 text-xs text-slate-100 outline-none sm:w-44 shrink-0 placeholder-slate-500">
+                    <div id="categories" class="flex gap-1 overflow-x-auto text-xs items-center"></div>
+                </div>
+
+                <div id="box" class="min-h-[180px]"></div>
+
+                <div id="deckNav" class="hidden items-center justify-between pt-2 border-t border-white/10">
+                    <div id="dots" class="flex gap-1"></div>
+                    <div class="flex gap-2">
+                        <button onclick="go(-1)"
+                            class="px-3 py-1 bg-white/5 border border-white/10 hover:border-amber-500/40 rounded-lg text-xs font-semibold active:scale-90 transition">←</button>
+                        <button onclick="go(1)"
+                            class="px-3 py-1 bg-white/5 border border-white/10 hover:border-amber-500/40 rounded-lg text-xs font-semibold active:scale-90 transition">→</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+            <div class="nav-controls">
+                <button class="arrow-btn" onclick="prevPanorama()" title="Previous">&#10094;</button>
+                <span id="scene-indicator" class="scene-indicator">Panorama 1 of 20</span>
+                <button class="arrow-btn" onclick="nextPanorama()" title="Next">&#10095;
+            </div>
 
 
 
+        <audio id="bgm" src="bgm.mp3" loop></audio>
+
+        <button id="bgmBtn" data-playing="false"
+            class="group relative flex items-center gap-3 px-5 py-2.5 bg-slate-900/60 backdrop-blur-md border rounded-xl text-sm font-semibold transition-all duration-300 active:scale-95 shadow-lg select-none
+  border-slate-800 text-slate-500 hover:border-slate-700 hover:text-slate-300
+  data-[playing=true]:border-amber-500/50 data-[playing=true]:text-amber-400 data-[playing=true]:shadow-amber-500/10 data-[playing=true]:hover:border-amber-400">
+            <span
+                class="absolute inset-0 rounded-xl bg-amber-500/10 blur-md opacity-0 group-data-[playing=true]:opacity-100 transition-opacity"></span>
+
+            <div class="relative flex items-end justify-center w-5 h-5 gap-[3px]">
+
+                <span
+                    class="hidden group-data-[playing=true]:inline-block w-1 rounded-full bg-amber-400 animate-bar"></span>
+                <span
+                    class="hidden group-data-[playing=true]:inline-block w-1 rounded-full bg-amber-400 animate-bar delay-1"></span>
+                <span
+                    class="hidden group-data-[playing=true]:inline-block w-1 rounded-full bg-amber-400 animate-bar delay-2"></span>
+
+                <svg class="group-data-[playing=true]:hidden w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path
+                        d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+
+                </svg>
+            </div>
+
+            <span id="bgmText" class="relative z-10">Sound off</span>
+
+
+        </button>
+    </main>
 
 
 
+    </button>
 
+    </div>
 
     <script src="script.js"></script>
+    <script src="script1.js"></script>
+</body>
+
 </html>
