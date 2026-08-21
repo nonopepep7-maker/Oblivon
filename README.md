@@ -3,15 +3,15 @@
 # OBLIVION
 
 <p>
-  A place for my projects and experiments.
+  A place for the web stuff I make.
 </p>
 
 <br>
 
 <a href="https://nonopepep7-maker.github.io/Oblivon/">
   <img
-    src="https://img.shields.io/badge/Live%20Demo-Open-111827?style=for-the-badge"
-    alt="Live Demo"
+    src="https://img.shields.io/badge/OPEN%20OBLIVION-→-111827?style=for-the-badge"
+    alt="Open Oblivion"
   >
 </a>
 
@@ -20,30 +20,26 @@
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5">
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3">
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=111827" alt="JavaScript">
-<img src="https://img.shields.io/badge/Tailwind%20CSS-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS">
+<img src="https://img.shields.io/badge/Tailwind_CSS-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS">
 <img src="https://img.shields.io/badge/Pannellum-360°-6B7280?style=flat-square" alt="Pannellum">
-
-<br><br>
-
-<sub>
-  <a href="https://nonopepep7-maker.github.io/Oblivon/">nonopepep7-maker.github.io/Oblivon/</a>
-</sub>
 
 </div>
 
 ---
 
-## What is Oblivion?
+## So, what is this?
 
-Oblivion is where I keep some of the web things I make.
+Oblivion is basically a place where I keep some of the web projects and experiments I make.
 
-The homepage is a 360° scene with a small project browser sitting on top of it. You can look around, move between scenes, open the project list, search through it, switch views, and turn the music on when you feel like it.
+The first thing you see is a 360° scene filling the screen. From there, you can move between different scenes, open the project panel, look through the projects, search for something, change the way the projects are shown, or turn the music on.
 
-It started as a simple web experiment and turned into a place to collect the other experiments too.
+It is not trying to be a huge platform.
+
+I just wanted the project page itself to feel like a project.
 
 ---
 
-## Take a look
+## Have a look
 
 <div align="center">
 
@@ -70,13 +66,13 @@ It started as a simple web experiment and turned into a place to collect the oth
   >
 </a>
 
-<br>
+<br><br>
 
 <strong>Loading view</strong>
 
 <br>
 
-<sub>The first thing you see.</sub>
+<sub>Where it starts.</sub>
 
 </td>
 
@@ -90,13 +86,13 @@ It started as a simple web experiment and turned into a place to collect the oth
   >
 </a>
 
-<br>
+<br><br>
 
 <strong>Grid view</strong>
 
 <br>
 
-<sub>A quick look at the projects.</sub>
+<sub>Everything at a glance.</sub>
 
 </td>
 
@@ -114,13 +110,13 @@ It started as a simple web experiment and turned into a place to collect the oth
   >
 </a>
 
-<br>
+<br><br>
 
 <strong>Homepage</strong>
 
 <br>
 
-<sub>The main scene and controls.</sub>
+<sub>The main scene.</sub>
 
 </td>
 
@@ -134,13 +130,13 @@ It started as a simple web experiment and turned into a place to collect the oth
   >
 </a>
 
-<br>
+<br><br>
 
 <strong>Deck view</strong>
 
 <br>
 
-<sub>Browse one project at a time.</sub>
+<sub>One project at a time.</sub>
 
 </td>
 
@@ -149,57 +145,46 @@ It started as a simple web experiment and turned into a place to collect the oth
 
 <br>
 
-<sub>Click an image to see the full screenshot.</sub>
+<sub>Click a screenshot to open it at full size.</sub>
 
 </div>
 
 ---
 
-## Things you can do
+## What can you do here?
 
-**Look around**
+There are **20 panorama scenes** to move through, so the background is not just one static image.
 
-There are 20 panorama scenes, and the arrows let you move between them.
+Then there is the project browser.
 
-**Browse projects**
+You can search it.
+Filter it.
+Switch between Grid and Deck.
+Use the arrow keys in Deck mode.
 
-Open the project panel to see the things collected there.
+And there is music too, if you want it.
 
-**Search**
-
-Type a project name or part of its description.
-
-**Filter**
-
-Use the categories to narrow the list down.
-
-**Switch views**
-
-Grid works well when you want to see everything. Deck is better when you want to focus on one project.
-
-**Turn the sound on**
-
-There is background music, but it stays off whenever you don't want it.
+Nothing complicated. That was kind of the point.
 
 ---
 
 ## Controls
 
-| Control                    | Action                        |
-| -------------------------- | ----------------------------- |
-| `Explore Projects`         | Opens the project browser     |
-| `Grid`                     | Shows projects in a grid      |
-| `Deck`                     | Shows one project at a time   |
-| `Search`                   | Searches the project list     |
-| `Categories`               | Filters the projects          |
-| `←` `→`                    | Changes the panorama          |
-| `Arrow Left` `Arrow Right` | Moves through Deck view       |
-| `Sound On / Off`           | Controls the background music |
-| `Esc`                      | Closes the project panel      |
+| Thing                        | Does this                               |
+| ---------------------------- | --------------------------------------- |
+| **Explore Projects**         | Opens the project panel                 |
+| **Grid**                     | Shows the projects together             |
+| **Deck**                     | Shows one project at a time             |
+| **Search**                   | Finds a project by title or description |
+| **Categories**               | Filters the project list                |
+| **← / →**                    | Moves between panorama scenes           |
+| **Arrow Left / Arrow Right** | Moves through Deck view                 |
+| **Sound On / Off**           | Turns the background music on or off    |
+| **Esc**                      | Closes the project panel                |
 
 ---
 
-## Project structure
+## Inside the project
 
 ```text
 .
@@ -217,57 +202,57 @@ There is background music, but it stays off whenever you don't want it.
 └── script.js
 ```
 
-The `view` folder contains the screenshots used here.
+A lot of the project lives in `script.js`.
 
-`index.html` is the page itself.
+That is where the panorama scenes, project data, filtering, search, Grid / Deck behaviour, and navigation are handled. The HTML is mostly the page itself and the UI, while the `view` folder contains the screenshots shown above.
 
-`script.js` contains the panorama scenes, project list, filters, search, and project navigation.
-
-The two audio files are used for the background music.
+The two audio files are there for the background music.
 
 ---
 
-## How it was made
+## How it works
 
-The page is just HTML, CSS, and JavaScript.
+There is no big setup behind this.
 
-**Pannellum** handles the 360° viewer, while **Tailwind CSS** is used for some of the interface styling.
+The page is built with HTML, CSS and JavaScript, with Tailwind CSS loaded from the CDN. Pannellum handles the 360° viewer.
 
-The project list is kept in JavaScript rather than being written out as static HTML. That makes the search, categories, and Grid / Deck views much easier to manage.
+The panorama list is just a JavaScript array. The same goes for the projects.
 
-No build system is needed.
+When you search or switch categories, the project panel is rendered again from that data. Deck view works from the same list, which keeps the whole thing fairly small and easy to change.
+
+The sound control is kept in `script1.js`.
 
 ---
 
-## Run it yourself
+## Run it
 
-Clone the repository:
+Clone the repo:
 
 ```bash
 git clone https://github.com/nonopepep7-maker/Oblivon.git
 ```
 
-Open the folder:
+Then:
 
 ```bash
 cd Oblivon
 ```
 
-Then open:
+Open `index.html`.
 
-```text
-index.html
-```
+That is enough.
 
-You can also use VS Code with Live Server.
+You can also use VS Code's Live Server if you prefer running it through a local server.
 
-Some parts of the page load remote libraries and panorama images, so the full experience needs an internet connection.
+Some of the libraries and panorama images are loaded from the web, so the complete page needs an internet connection.
 
 ---
 
-## Add a project
+## Adding a project
 
-Open `script.js` and find:
+Open `script.js`.
+
+Look for:
 
 ```javascript
 const projects = [
@@ -275,7 +260,7 @@ const projects = [
 ];
 ```
 
-Add a project like this:
+Then add something like:
 
 ```javascript
 {
@@ -287,13 +272,15 @@ Add a project like this:
 }
 ```
 
-Save it, refresh the page, and it will appear in the project browser.
+Reload the page.
+
+The project will be picked up by the search, category filter, Grid view, and Deck view automatically.
 
 ---
 
-## Add another panorama
+## Adding a panorama
 
-Panorama entries are kept in the scene list:
+The scenes are kept in:
 
 ```javascript
 const scenesList = [
@@ -301,7 +288,7 @@ const scenesList = [
 ];
 ```
 
-A new entry looks like this:
+For example:
 
 ```javascript
 {
@@ -311,19 +298,22 @@ A new entry looks like this:
 }
 ```
 
-The matching scene also needs to be added to the Pannellum configuration.
+A matching scene also has to be added to the Pannellum configuration in `script.js`.
 
 ---
 
 ## Built with
 
-* HTML5
-* CSS3
-* JavaScript
-* [Tailwind CSS](https://tailwindcss.com/)
-* [Pannellum](https://pannellum.org/)
+[![Pannellum](https://img.shields.io/badge/Pannellum-360°-6B7280?style=flat-square)](https://pannellum.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38BDF8?style=flat-square\&logo=tailwindcss\&logoColor=white)](https://tailwindcss.com/)
 
-The panorama assets are loaded from their original sources. Check their individual licenses before using them somewhere else.
+HTML, CSS and JavaScript do the rest.
+
+---
+
+## One more thing
+
+The panorama images and some other external assets are loaded from their original sources. Their licenses belong to their respective creators, so check those before reusing anything outside this project.
 
 ---
 
@@ -331,7 +321,8 @@ The panorama assets are loaded from their original sources. Check their individu
 
 ### Made by Nirdesh
 
-Just making things and putting them here.
+I make things.
+Sometimes they work on the first try.
 
 <br>
 
@@ -341,6 +332,6 @@ Just making things and putting them here.
 
 <br><br>
 
-<sub>Thanks for looking around.</sub>
+<sub>Thanks for stopping by.</sub>
 
 </div>
